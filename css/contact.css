@@ -99,3 +99,24 @@ input[type="email"]:valid ~ .input-validation::before {
         margin-top: 20px;
     }
 }
+
+@media screen and (min-width:576px) and (max-width:768px) {
+    #contact {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact h1 {
+        width: 100%;
+    }
+    #coordo {
+        width: 100%;
+    }
+    #motif {
+        width: fit-content;
+    }
+    #controles {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
