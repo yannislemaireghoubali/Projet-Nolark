@@ -177,15 +177,15 @@ footer a{
 }
 
 /* Smartphone */
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
     body {
         font-size: large;
     }
-    
+
     header, section {
         width: auto; /* Suppression de la largeur définie */
     }
-    
+
     header img {
         width: 100%; /* Bannière sur toute la largeur */
         background-color: black; /* Extension artificielle noire */
@@ -219,7 +219,7 @@ footer a{
         width: 100%;
     }
 
-    
+
     nav input {
         display: block; /* Affichage de l'input pour pouvoir cliquez dessus */
         position: absolute;
@@ -289,11 +289,16 @@ footer a{
     }
 
     #gauche, #milieu, #droite {
-        background-size: contain;
+        background-size: contain; 
     }
-    
+
     footer {
         display: none;
     }
 }
 
+@media screen and (min-width:576px) and (max-width:768px) {
+    #thematique {
+        flex-direction: row; /* Sur tablette, on met les casques de la page d'accueil côte à côte */
+    }
+}
