@@ -12,7 +12,11 @@ window.addEventListener("load", function() {
 
 function validEnvoi() {
     if (window.document.querySelector("#i_nom").value === "" &&
-    window.document.querySelector("#i_prenom").value === "" ) {
+    window.document.querySelector("#i_prenom").value === "" &&
+    window.document.querySelector("#i_email").value === "" &&
+    window.document.querySelector("#num_jour").value === "" &&
+    window.document.querySelector("#num_mois").value === "" &&
+    window.document.querySelector("#num_annee").value === "" {
     alert("Le nom ou le prénom doivent être remplis"); // On affiche un message
     }
     else {
