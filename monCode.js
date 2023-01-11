@@ -1,8 +1,3 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
- */
-
 function hello() {
     alert("coucou");
 }
@@ -16,10 +11,7 @@ function validEnvoi() {
     alert("Le nom ou le prénom doivent être remplis"); // On affiche un message
     }
     else if (window.document.querySelector("#i_email").value === "") {
-    alert("L'email doit être remplis"); // On affiche un message
-    }
-    else if (window.document.querySelector("#i_email").value === "") {
-    alert("L'email doit être rempli"); // On affiche un message
+    alert("L'email doit être remplie"); // On affiche un message
     }
     else {
         let question = "Souhaitez-vous réellement utiliser l'adresse suivante : "
