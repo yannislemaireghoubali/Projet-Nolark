@@ -1,4 +1,12 @@
 const fixe = 1100;
+/**
+ * Pour Satisfaite de les prestations lors de la création du site vitrine, il fautr concevoir une page 
+spécifique contenant un simulateur de calcul à l’attention des commerciaux faisant partie de la force de vente itinérante 
+(dix personnes environ) et ayant accessoirement assuré la distribution des trois modèles suivants :
+ Le modèle "X-Spirit", haut de gamme est vendu au prix moyen de 350 € HT ;
+ Le modèle "Multitec", qualité standard, est vendu au prix moyen de 180 € HT ;
+ Le modèle "S 20", qualité standard, est vendu au prix moyen de 140 € HT.
+ */
 
 function anciennete(ancien,salaire){
     if()
