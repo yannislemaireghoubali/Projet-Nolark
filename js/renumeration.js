@@ -6,11 +6,16 @@ spécifique contenant un simulateur de calcul à l’attention des commerciaux f
  Le modèle "X-Spirit", haut de gamme est vendu au prix moyen de 350 € HT ;
  Le modèle "Multitec", qualité standard, est vendu au prix moyen de 180 € HT ;
  Le modèle "S 20", qualité standard, est vendu au prix moyen de 140 € HT.
- */
 
-function anciennete(ancien,salaire){
-    if()
-}
+La rémunération des représentants se calcule de la façon suivante :
+ Un fixe de 1100 €, majoré de 3% à partir de 5 ans d'ancienneté ou de 6% au-delà de 10 ans ;
+ Une commission de 2% sur le CA (chiffre d'affaires) HT du modèle "S 20" ;
+ Une commission de 6% sur le CA HT du modèle "X-Spirit" après le 50ème casque vendu ;
+ Une commission progressive sur le modèle "Multitec" :
+o 4% sur le CA jusqu'au 20ème casque ;
+o 6% du 21ème au 50ème ;
+o 10% à partir du 51ème casque vendu.
+ */
 
 function comS20(nb){
     const prix_S20= 140;
@@ -35,5 +40,17 @@ function comMultitec(nb){
     }
     else{
         return nb*prixXSpirit*0.10;
+    }
+}
+
+function Anciennete(nbAncien){
+    if (nbAncien <5){
+        
+    }
+    else if nbAncien <10{
+        
+    }
+    else{
+        
     }
 }
