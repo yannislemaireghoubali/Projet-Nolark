@@ -4,7 +4,7 @@ utilisation d'un fichier javascript
 ## Qu'est ce que Javascript ?
 JavaScript est un langage interprété, directement exécuté par le navigateur, donc côté client, comme le HTML.
 
-##En quoi un langage client est-il intéressant ?
+## En quoi un langage client est-il intéressant ?
 Il apporte la puissance d'un vrai langage de programmation, avec la possibilité de manipuler des variables, de réaliser des traitements conditionnels ou itératifs, bref d'aller beaucoup plus loin dans les traitements possibles d'une page.
 
 ## Historique
