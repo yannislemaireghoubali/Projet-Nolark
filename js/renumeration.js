@@ -17,40 +17,62 @@ o 6% du 21ème au 50ème ;
 o 10% à partir du 51ème casque vendu.
  */
 
-function comS20(nb){
-    const prix_S20= 140;
-    const taux_S20= 0.02;
-    return nb*prix_S20*taux_S20;
+/**
+* Fonction qui retourne la prime d'ancienneté
+* @param {integer} nb
+* @param {float} fixe
+* @returns {float}
+*/
+function recupPrimeAnciennete(nb, fixe) {
+    const nbAncienMin = 5, txAncienMin = 0.03, nbAncienSup = 10, txAncienSup = 0.06;
+        if (nb >= nbAncienSup){
+            return (fixe * txAncienSup);
+        }
+        else if (nb >= nbAncienMin) {
+            return (fixe * txAncienMin);
+        }
+        else {
+            return 0.0;
+        }
+} // La position des accolades ci-dessus n'est pas du tout optimale... (mise en page A4)
+/**
+* Fonction qui retourne la commission sur le S20
+* @param {integer} nb
+* @returns {float}
+*/
+function recupComS20(nb) {
+    const prixS20 = 140.0, txComS20 = 0.02;
+    return (nb * prixS20 * txComS20);
 }
-
-function comXSpirit(nb){
-    const prixXSpirit = 350;
-    const tauxXSpirit = 0.06;
-    if (nb => 50){
-        return nb*prixXSpirit*tauxXSpirit;
+/**
+* Fonction qui retourne la commission sur le X-Spirit
+* @@param {integer} nb
+* @returns {float}
+*/
+function recupComXS(nb) {
+    const prixXS = 350.0, nbXSMinCom = 50, txComXS = 0.06;
+    if (nb >= nbXSMinCom) {
+    return ((nb - nbXSMinCom) * prixXS * txComXS);
     }
-
-function comMultitec(nb){
-    const prixMultitec = 180;
-    if (nb => 20){
-        return nb*prixXSpirit*0.04;
-    }
-    else if (nb => 21, nb <=50){
-        return nb*prixXSpirit*0.06;
-    }
-    else{
-        return nb*prixXSpirit*0.10;
+    else {
+    return 0.0;
     }
 }
-
-function Anciennete(nbAncien){
-    if (nbAncien <5){
-        
+/**
+* Fonction qui retourne la commission sur le Multitec
+* @param {integer} nb
+* @returns {float}
+*/
+function recupComMulti(nb) {
+    const prixMu = 180.0, nbMultiTranche1 = 20, nbMultiTranche2 = 50;
+    const txMultiTranche1 = 0.04, txMultiTranche2 = 0.06, txMultiTranche3 = 0.1;
+    if (nb <= nbMultiTranche1) {
+        return (nb * prixMu * txMultiTranche1);
     }
-    else if nbAncien <10{
-        
+    else if (nb <= nbMultiTranche2) {
+        return ((nbMultiTranche1 * prixMu * txMultiTranche1) + ((nb - nbMultiTranche1) * prixMu * txMultiTranche2));
     }
-    else{
-        
+    else {
+        return ((nbMultiTranche1 * prixMu * txMultiTranche1) + ((nbMultiTranche2 - nbMultiTranche1) * prixMu * txMultiTranche2) + ((nb - nbMultiTranche2) * prixMu * txMultiTranche3));
     }
 }
