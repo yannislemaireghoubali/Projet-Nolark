@@ -22,7 +22,7 @@ function PrimeAnciennete(nb){
         return primeanciennete;
     }
     else if(nb >4){
-        
+        return annéesupplementairedanciennete;
     }
 }
 
