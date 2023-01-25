@@ -4,7 +4,11 @@
  */
 const plafond = 900;
 const primeanciennete = 300;
-
+/**
+ *  simulateur de calcul leur permettant de calculer simplement leur prime de fin d’année.
+ * @param {type} nb
+ * @returns {Number|plafond}
+ */
 function DistanceMaximaleParcourueFinAnnee(nb){
     const prix = 0.01;
     let primededistance = plafond * prix;
@@ -15,6 +19,11 @@ function DistanceMaximaleParcourueFinAnnee(nb){
         return plafond;
     }
 }
+/**
+ * fonction renvoyant une prime d’ancienneté attribuée qu’à partir de 4 années d'ancienneté dans l'entreprise.
+ * @param {type} nb
+ * @returns {Number|primeanciennete}
+ */
 function PrimeAnciennete(nb){
     const pourcentagedaugmentation = 0.30;
     let annéesupplementairedanciennete = primeanciennete * pourcentagedaugmentation;
@@ -25,7 +34,12 @@ function PrimeAnciennete(nb){
         return annéesupplementairedanciennete;
     }
 }
-
+/**
+ * fonction qui retourne la prime obtenu par le chauffeur
+ * en comptant la prise en compte du nombre d'accident
+ * @param {type} nb
+ * @returns {Number|Boolean}
+ */
 function NbAccidentEgaleReductionDePrime(nb){
     if(nb === 1){
         return plafond/2;

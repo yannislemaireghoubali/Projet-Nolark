@@ -180,4 +180,3 @@ function recupIndemKm(nb) {
     return plafond;
     }
 }
-
