@@ -1,3 +1,5 @@
+/* global remuneration */
+
 const fixe = 1100;
 /**
  * Pour Satisfaite de les prestations lors de la création du site vitrine, il fautr concevoir une page 
@@ -88,12 +90,9 @@ window.addEventListener("load", function() {
     let nbS20 = parseInt(window.document.querySelector("#num_s20").value);
     let nbXS = parseInt(window.document.querySelector("#num_xs").value);
     let nbMulti = parseInt(window.document.querySelector("#num_multi").value);
-    let remuneration = fixe + recupPrimeAnciennete(nbAncien, fixe)
-    + recupComS20(nbS20) + recupComXS(nbXS)
-    + recupComMulti(nbMulti);
+    let remuneration = fixe + recupPrimeAnciennete(nbAncien, fixe) + recupComS20(nbS20) + recupComXS(nbXS) + recupComMulti(nbMulti);
     // Affichage du résultat
-    window.document.querySelector("#remuneration").innerHTML =
-    "La rémunération sera de : " + remuneration + " €";
+    window.document.querySelector("#remuneration").innerHTML = "La rémunération sera de : " + remuneration + " €";
     });
 });
 
@@ -132,7 +131,6 @@ function calcRemu() {
     let nbS20 = parseInt(window.document.querySelector("#num_s20").value);
     let nbXS = parseInt(window.document.querySelector("#num_xs").value);
     let nbMulti = parseInt(window.document.querySelector("#num_multi").value);
-    let remuneration = fixe + recupPrimeAnciennete(nbAncien, fixe) + recupComS20(nbS20) + recupComXS(nbXS) + recupComMulti(nbMulti);
     let km = recupValeur("#num_km");
     let remuneration = fixe + recupPrimeAnciennete(nbAncien, fixe) + recupComS20(nbS20) + recupComXS(nbXS) + recupComMulti(nbMulti) + recupIndemKm(km);
     
