@@ -161,8 +161,7 @@ afficheRemu(remuneration);
 * @return {undefined}
 */
 function afficheRemu(nombre) {
-    window.document.querySelector("#remuneration").innerHTML =
-    "La rémunération sera de : " + nombre + " €";
+    window.document.querySelector("#remuneration").innerHTML = "La rémunération sera de : " + nombre + " €";
 }
 
 /**
