@@ -1,5 +1,4 @@
 /* global remuneration */
-
 const fixe = 1100;
 /**
  * Pour Satisfaite de les prestations lors de la création du site vitrine, il fautr concevoir une page 
@@ -17,10 +16,8 @@ La rémunération des représentants se calcule de la façon suivante :
 o 4% sur le CA jusqu'au 20ème casque ;
 o 6% du 21ème au 50ème ;
 o 10% à partir du 51ème casque vendu.
- */
 
-/**
-* Fonction qui retourne la prime d'ancienneté
+Fonction qui retourne la prime d'ancienneté avec comme parametre
 * @param {integer} nb
 * @param {float} fixe
 * @returns {float}
@@ -80,11 +77,9 @@ function recupComMulti(nb) {
 }
 
 window.addEventListener("load", function() {
- 
     window.document.querySelector("#btn_calculer").addEventListener("click", function() {
     // Déclaration des constantes
     const fixe = 1100.0;
-
     // Déclaration et affectation des variables
     let nbAncien = parseInt(window.document.querySelector("#num_ancien").value);
     let nbS20 = parseInt(window.document.querySelector("#num_s20").value);
@@ -147,7 +142,6 @@ function recupValeur(id) {
 
 // Affichage du résultat
 window.document.querySelector("#remuneration").innerHTML = "La rémunération sera de : " + remuneration + " €";
-
 // Affichage du résultat
 afficheRemu(remuneration);
 

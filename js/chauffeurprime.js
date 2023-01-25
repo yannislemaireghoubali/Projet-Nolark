@@ -54,3 +54,13 @@ function NbAccidentEgaleReductionDePrime(nb){
         return plafond === 0.0;
     }
 }
+/**
+function calcRemu() {
+    // Déclaration des constantes
+    const plafond = 900;
+    const primeanciennete = 300;
+    // Déclaration et affectation des variables
+    
+    // Affichage du résultat
+    window.document.querySelector("#remuneration").innerHTML = "La rémunération sera de : " +  + " €";
+ */
