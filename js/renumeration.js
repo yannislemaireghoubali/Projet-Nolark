@@ -122,10 +122,8 @@ window.addEventListener("load", function() {
 * @returns {undefined}
 */
 function calcRemu() {
-    
     // Déclaration des constantes
     const fixe = 1100.0;
-    
     // Déclaration et affectation des variables
     let nbAncien = parseInt(window.document.querySelector("#num_ancien").value);
     let nbS20 = parseInt(window.document.querySelector("#num_s20").value);
@@ -133,7 +131,6 @@ function calcRemu() {
     let nbMulti = parseInt(window.document.querySelector("#num_multi").value);
     let km = recupValeur("#num_km");
     let remuneration = fixe + recupPrimeAnciennete(nbAncien, fixe) + recupComS20(nbS20) + recupComXS(nbXS) + recupComMulti(nbMulti) + recupIndemKm(km);
-    
     // Affichage du résultat
     window.document.querySelector("#remuneration").innerHTML = "La rémunération sera de : " + remuneration + " €";
 }
