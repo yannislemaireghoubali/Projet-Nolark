@@ -172,12 +172,12 @@ function afficheRemu(nombre) {
 */
 function recupIndemKm(nb) {
     const prix = 0.15, plafond = 350;
-    let indem = nb * prix;
-    if (indem > plafond) {
-    return plafond;
+    let index = nb * prix;
+    if (index > plafond) {
+    return index;
     }
     else {
-    return indem;
+    return plafond;
     }
 }
 
