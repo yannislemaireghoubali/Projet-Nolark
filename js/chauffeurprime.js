@@ -54,13 +54,19 @@ function NbAccidentEgaleReductionDePrime(nb){
         return plafond === 0.0;
     }
 }
-/**
+
 function calcRemu() {
     // Déclaration des constantes
     const plafond = 900;
     const primeanciennete = 300;
     // Déclaration et affectation des variables
+    let nbAncien = recupValeur("#num_ancien");
+    let nbAccident = recupValeur("#num_kilometres");
+    let nbkm = recupValeur("#num_accident");
+    let nbAncien2 = parseInt(window.document.querySelector("#num_ancien").value);
+    let nbAccident2 = parseInt(window.document.querySelector("#num_kilometres").value);
+    let nbkm2 = parseInt(window.document.querySelector("#num_accident").value);
     
     // Affichage du résultat
-    window.document.querySelector("#remuneration").innerHTML = "La rémunération sera de : " +  + " €";
- */
+    window.document.querySelector("#remuneration").innerHTML = "La rémunération sera de : " + total + " €";
+    }
