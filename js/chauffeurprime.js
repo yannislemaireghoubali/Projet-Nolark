@@ -98,8 +98,8 @@ function gestionNbAccidents(nbAccidents, primeAnnuelleSansAccident, primeAnnuell
     elH2 = window.document.createElement('h2');
     elH2.id = 'remuneration';
     window.document.querySelector('#recueilinfos').appendChild(elH2);
- }
- 
+}
+
     // Gestion de l'affichage avec gestion particulière pour 0 et 1 accident
     if (nbAccidents === 0) {
     elH2.innerHTML = 'Votre prime sera de ' + primeAnnuelle + ' €';
@@ -109,7 +109,7 @@ function gestionNbAccidents(nbAccidents, primeAnnuelleSansAccident, primeAnnuell
     }
     else {
     elH2.innerHTML = 'Votre prime sera de ' + primeAnnuelle + ' € alors qu\'elle aurait pu être de ' + primeAnnuelleSansAccident + ' € sans ' + nbAccidents + ' accidents responsables...';
- }
+    }
 }
 /**
 * Fonction qui retourne un entier depuis une valeur prise dans le DOM et qui replace le 
@@ -140,7 +140,8 @@ export function recupValeur(id) {
     if (isNaN(valeur)) {
     window.document.querySelector(id).value = 0;
     return 0;
-    } else {
+    }
+    else {
     return valeur;
     }
 }
