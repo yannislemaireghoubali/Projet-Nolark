@@ -107,8 +107,14 @@ function gestionNbAccidents(nbAccidents, primeAnnuelleSansAccident, primeAnnuell
     else if (nbAccidents === 1) {
     elH2.innerHTML = 'Votre prime sera de ' + primeAnnuelle + ' € alors qu\'elle aurait pu être de ' + primeAnnuelleSansAccident + ' € sans ' + nbAccidents + ' accident responsable...';
     }
-    else {
+    else if (nbAccidents === 2){
     elH2.innerHTML = 'Votre prime sera de ' + primeAnnuelle + ' € alors qu\'elle aurait pu être de ' + primeAnnuelleSansAccident + ' € sans ' + nbAccidents + ' accidents responsables...';
+    }
+    else if (nbAccidents === 3){
+    elH2.innerHTML = 'Votre prime sera de ' + primeAnnuelle + ' € alors qu\'elle aurait pu être de ' + primeAnnuelleSansAccident + ' € sans ' + nbAccidents + ' accidents responsables...';
+    }
+    else{
+        elH2.innerHTML = 'Votre prime sera annulé car il y a trop d accidents responsables';
     }
 }
 /**
@@ -135,7 +141,7 @@ function recupValeur(id) {
 * @param {String} id
 * @return {integer}
 */
-export function recupValeur(id) {
+function recupValeur(id){
     var valeur = parseInt(window.document.querySelector(id).value);
     if (isNaN(valeur)) {
     window.document.querySelector(id).value = 0;
