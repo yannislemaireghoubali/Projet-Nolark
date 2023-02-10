@@ -4,12 +4,40 @@
  */
 
 
+function getAlcoolPur(nbVerres) {
+    return nbVerres * 10;
+}
+
 /**
-* Tests unitaires du projet Alcoolémie
+* Fonction qui retourne l'alcool pur ingéré en fonction du nombre 
+* de verre
 * 
+* @param {int} nbVerres
+* @returns {int}
 */
-MesTestsUnitaires = TestCase('AlcoolemieTest');
-MesTestsUnitaires.prototype.testsGetAlcoolPur = function() {
-    assertEquals('0 verre', 0, getAlcoolPur(0));
-    assertEquals('1 verre', 10, getAlcoolPur(1));
-};
+function getAlcoolPur(nbVerres) {
+    const uniteAlcool = 10;
+    return uniteAlcool * nbVerres;
+}
+
+function getCoefDiffusion(sexe) {
+ if (sexe === 'homme') {
+ return 0.7;
+ } else {
+ return 0.6;
+ }
+
+/**
+* Fonction qui retourne le coefficient de diffusion en fonction du sexe
+* 
+* @param {string} sexe
+* @returns {float}
+*/
+function getCoefDiffusion(sexe) {
+ const coefDiffuH = 0.7, coefDiffuF = 0.6;
+ if (sexe === 'homme') {
+ return coefDiffuH;
+ } else {
+ return coefDiffuF;
+ }
+}
